@@ -22,6 +22,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.tensor_model_parallel_size=$ROLLOUT_TP_SIZE \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.4 \
     actor_rollout_ref.ref.log_prob_micro_batch_size=4 \
+    critic.model.enable_gradient_checkpointing=True \
     critic.optim.lr=1e-5 \
     critic.model.path=$BASE_MODEL \
     critic.ppo_micro_batch_size=8 \
