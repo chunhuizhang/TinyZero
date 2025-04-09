@@ -29,12 +29,12 @@ python3 -m verl.trainer.main_ppo \
     critic.ppo_micro_batch_size=8 \
     algorithm.kl_ctrl.kl_coef=0.001 \
     trainer.logger=['wandb'] \
-    +trainer.val_before_train=False \
+    +trainer.val_before_train=True \
     trainer.default_hdfs_dir=null \
     trainer.n_gpus_per_node=$N_GPUS \
     trainer.nnodes=1 \
-    trainer.save_freq=100 \
-    trainer.test_freq=100 \
+    trainer.save_freq=200 \
+    trainer.test_freq=5 \
     trainer.project_name=rl4llm \
     trainer.experiment_name=$EXPERIMENT_NAME \
     trainer.total_epochs=15 2>&1 | tee verl_demo.log
