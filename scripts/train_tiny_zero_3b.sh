@@ -33,6 +33,6 @@ python3 -m verl.trainer.main_ppo \
     trainer.nnodes=1 \
     trainer.save_freq=100 \
     trainer.test_freq=100 \
-    trainer.project_name=TinyZero \
+    trainer.project_name=rl4llm \
     trainer.experiment_name=$EXPERIMENT_NAME \
     trainer.total_epochs=15 2>&1 | tee verl_demo.log
